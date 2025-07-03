@@ -1,4 +1,3 @@
-# app/main.py
 from fastapi import FastAPI
 from app.api.nfe import router as nfe_router
 
@@ -8,4 +7,4 @@ app.include_router(nfe_router, prefix="/api")
 
 @app.get("/")
 async def root():
-    return {"message": "API está funcionando!"}
+    return {"message": "API is working!"}

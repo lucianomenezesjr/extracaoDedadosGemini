@@ -1,6 +1,10 @@
 from fastapi import FastAPI
-from app.api import nfe
+from app.api.nfe import router as nfe_router
 
-app = FastAPI(title="Simulador de Nota Fiscal com Gemini")
+app = FastAPI()
 
-app.include_router(nfe.router, prefix="/nfe", tags=["Notas Fiscais"])
+app.include_router(nfe_router, prefix="/api")
+
+@app.get("/")
+async def root():
+    return {"message": "API is working!"}

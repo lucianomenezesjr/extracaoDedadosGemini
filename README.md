@@ -8,7 +8,9 @@
     - Subir containers com FastAPI e Postgres
     - Criar modelo inicial `GeminiMessage` e testar conexão com o banco
     - Integrar com a API do Gemini
-    - Criar serviço `GeminiService` para gerar resposta e salvar no banco
+    - Gerar banco de dados por SQLAlchemy
+    - Integrar API com o banco de dados
+    - Criar serviço `GeminiService` para gerar resposta com os principais campos da nota fiscal e salvar no banco de dados
 
 - **Resultado Esperado**
     - Ambiente com API e banco de dados rodando em containers

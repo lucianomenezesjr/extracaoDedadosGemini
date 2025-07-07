@@ -15,7 +15,7 @@
 - **Resultado Esperado**
     - Ambiente com API e banco de dados rodando em containers
     - Integração funcional com a API do Gemini, recebendo um prompt e salvando no banco
-    - Evolução: **100% - 100%**
+    - Evolução: **90% - 100%**
 
 - **Dúvidas do Aluno/Impedimentos Encontrados**
     - Até o momento nenhuma dúvida.

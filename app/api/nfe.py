@@ -6,6 +6,8 @@ from app.database import SessionLocal, get_db
 import tempfile
 import shutil
 import os
+from datetime import timezone
+from pytz import timezone
 
 router = APIRouter()
 
@@ -21,12 +23,11 @@ default_prompt = """Analyze the document and extract the following information, 
 Ensure the CNPJ is in the format XX.XXX.XXX/XXXX-XX, the emission date in DD/MM/YYYY format, and the total value as a decimal number (using dot as decimal separator).
 """
 
-@router.post("/extract")
-async def extract_fields(
-    prompt: str = Query(default_prompt, description="Prompt for data extraction"), 
-    file: UploadFile = File(...)):
+tz_brasilia = timezone('America/Sao_Paulo') 
 
-    # Verify the supported file types
+@router.post("/extract")
+async def extract_fields(file: UploadFile = File(...)):
+
     if file.content_type not in ["application/pdf", "image/jpeg", "image/png"]:
         raise HTTPException(status_code=400, detail="Unsupported file type")
 
@@ -37,13 +38,9 @@ async def extract_fields(
 
     try:
         gemini = GeminiService()
-        response_text = gemini.generate_from_file(temp_path, prompt)
+        receipt_data = gemini.generate_from_file(temp_path)
 
-        return JSONResponse(content={
-            "file": file.filename,
-            "prompt": prompt,
-            "response": response_text
-        })
+        return receipt_data
 
     finally:
         # Remove the temporary file
@@ -64,7 +61,7 @@ async def get_all_receipts(db: Session = Depends(get_db)):
                 "date_of_emission": receipt.date_of_emission.strftime("%d/%m/%Y"),
                 "total_value": receipt.total_value,
                 "file_name": receipt.file_name,
-                "created_at": receipt.created_at.strftime("%Y-%m-%d %H:%M:%S") if receipt.created_at else None
+                "created_at": receipt.created_at.astimezone(tz_brasilia).strftime("%Y-%m-%d %H:%M:%S") if receipt.created_at else None
             }
             for receipt in receipts
         ]

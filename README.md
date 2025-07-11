@@ -27,7 +27,7 @@
     - \<RESPOSTAS\>
 
 ## SEMANA 2: API de Extração de Dados da Nota Fiscal
-### Objetivo: \<OBJETIVO DA SEMANA\>
+### Objetivo: \Correção do que foi requisitado
 **07/07 - 11/07**
 - **Backlog Semanal**
     - Retirada do input do prompt
@@ -35,7 +35,7 @@
 
 - **Resultado Esperado**
     - Aplicação do retorno padrozinado e retirada do input
-    - Evolução: \<100% - 100%\>
+    - Evolução: \100% - 100%\
 
 - **Dúvidas do Aluno/Impedimentos Encontrados**
     - \<DÚVIDAS\>

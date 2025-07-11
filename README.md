@@ -1,35 +1,4 @@
-    ~/Documentos/apiGeminiNotaFiscal/LucianoJunior    main ⇡1  git push origin                                                                                        ✔ 
-To https://github.com/Avaliacao-de-Desempenho/LucianoJunior.git
- ! [rejected]        main -> main (fetch first)
-error: failed to push some refs to 'https://github.com/Avaliacao-de-Desempenho/LucianoJunior.git'
-hint: Updates were rejected because the remote contains work that you do not
-hint: have locally. This is usually caused by another repository pushing to
-hint: the same ref. If you want to integrate the remote changes, use
-hint: 'git pull' before pushing again.
-hint: See the 'Note about fast-forwards' in 'git push --help' for details.
-    ~/Documentos/apiGeminiNotaFiscal/LucianoJunior    main ⇡1  git pull origin main                                                                                 1 ✘ 
-remote: Enumerating objects: 8, done.
-remote: Counting objects: 100% (8/8), done.
-remote: Compressing objects: 100% (6/6), done.
-remote: Total 6 (delta 4), reused 0 (delta 0), pack-reused 0 (from 0)
-Unpacking objects: 100% (6/6), 1.99 KiB | 1016.00 KiB/s, done.
-From https://github.com/Avaliacao-de-Desempenho/LucianoJunior
- * branch            main       -> FETCH_HEAD
-   91e1c0e..0d99b9b  main       -> origin/main
-hint: You have divergent branches and need to specify how to reconcile them.
-hint: You can do so by running one of the following commands sometime before
-hint: your next pull:
-hint:
-hint:   git config pull.rebase false  # merge
-hint:   git config pull.rebase true   # rebase
-hint:   git config pull.ff only       # fast-forward only
-hint:
-hint: You can replace "git config" with "git config --global" to set a default
-hint: preference for all repositories. You can also pass --rebase, --no-rebase,
-hint: or --ff-only on the command line to override the configured default per
-hint: invocation.
-fatal: Need to specify how to reconcile divergent branches.
-    ~/Documentos/apiGeminiNotaFiscal/LucianoJunior    main ⇣2⇡1    ## SEMANA 1: API de Extração de Dados da Nota Fiscal
+## SEMANA 1: API de Extração de Dados da Nota Fiscal
 ### Objetivo: Estruturar o projeto, rodar a API FastAPI e integrar com a API do Gemini
 **02/07 - 04/07**
 - **Backlog Semanal**

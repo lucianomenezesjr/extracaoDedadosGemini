@@ -45,25 +45,6 @@
 
 - **Respostas das Questões**
     - \<RESPOSTAS\>
-
-## SEMANA 3: \<NOME DO PROJETO\>
-### Objetivo: \<OBJETIVO DA SEMANA\>
-**14/07 - 17/07**
-- **Backlog Semanal**
-    - \<QUEBRAR O OBJETIVO DA SEMANA EM PARTES MENORES\>
-
-- **Resultado Esperado**
-    - \<QUAL ENTREGÁVEL SERÁ PRODUZIDO QUANDO O OBJETIVO FOR ALCANÇADO (FINAL DA SEMANA)\>
-    - Evolução: \<0% - 100%\>
-
-- **Dúvidas do Aluno/Impedimentos Encontrados**
-    - \<DÚVIDAS\>
-
-- **Questões para o Aluno**
-    - \<QUESTÕES\>
-
-- **Respostas das Questões**
-    - \<RESPOSTAS\>
 ---
 ## Descrição do Projeto
 Criar uma API em Python, usando FastAPI, que receba uma imagem (.jpg, .jpeg, .png) ou um PDF de uma Nota Fiscal; salve o Valor Total, Data de Emissão e CNPJ no banco de dados Postgres e retorne os mesmos campos em formato json.
